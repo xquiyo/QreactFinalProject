@@ -101,8 +101,12 @@ button:hover {
 .menu__backdrop {
   position: absolute;
   background-color: white;
+  border: 1px solid gray;
+  border-radius: 8px;
+  padding: 12px;
+  margin: 12px;
   top: 0;
-  bottom: 0;
+  bottom: 100;
   right: 0;
   left: 0;
   z-index: 100;
@@ -112,6 +116,7 @@ button:hover {
   transition: all 300ms ease; /* smooth transition */
   opacity: 0;
   visibility: hidden;
+  transition: all 400ms ease;
 }
 
 .btn__menu--close {
@@ -272,7 +277,6 @@ button:hover {
 nav {
   width: 100%;
   margin-top: 16px;
-  margin-bottom: 100px;
 }
 .nav__container {
   display: flex;
@@ -318,9 +322,28 @@ header {
   display: flex;
   align-items: center;
   padding: 24px 24px;
-  margin-top: 200px;
-  margin-bottom: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  margin-top: 80px;
+  margin-bottom: 200px;
+  animation: fade-up 350ms 450ms backwards;
 }
+@keyframes fade-up {
+  0% {
+      opacity: 0;
+      transform: translateY(1000px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+
+
+
 .header__description--container {
   /* left header */
   display: flex;
@@ -409,9 +432,8 @@ header {
   align-items: center;
   justify-content: center;
   padding: 24px;
-  margin-bottom: 400px;
+  margin-bottom: 200px;
 }
-
 .section__desc--container {
   text-align: center;
 }
@@ -453,14 +475,14 @@ header {
 #professionals {
   position: relative;
 }
-
 .prof__row {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 400px;
+  margin-bottom: 200px;
   padding: 24px;
 }
+  
 .prof__section-title {
   display: flex;
   flex-direction: column;
@@ -513,7 +535,7 @@ header {
 .steps__row {
   display: flex;
   flex-direction: row;
-  margin-bottom: 400px;
+  margin-bottom: 200px;
   padding: 12px 12px;
 }
 .steps__title--wrapper {
@@ -678,7 +700,7 @@ header {
   display: flex;
   flex-direction: column;
   padding: 12px;
-  margin-top: 500px;
+  margin-top: 200px;
   margin-bottom: 200px;
 }
 .plan__container {
