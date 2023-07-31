@@ -22,6 +22,7 @@ body {
 a {
   text-decoration: none;
   letter-spacing: 1px;
+  position: relative;
 }
 ul {
   display: flex;
@@ -29,6 +30,7 @@ ul {
 }
 li {
   list-style: none;
+  position: relative;
 }
 .text--blue {
   color: #008ac9;
@@ -66,7 +68,21 @@ button:hover {
   transition: all 300ms ease;
 }
 
-
+/* animation hover */
+  .link__hover--effect:after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    background-color: black;
+    width: 0;
+    bottom: -3px;
+    right: 0;
+    transition: all 300ms ease;
+  }
+  .link__hover--effect:hover::after {
+    width: 100%;
+    left: 0;
+  }
 /* nav */
 
 .logo {
@@ -290,25 +306,25 @@ nav {
 .nav__links {
   font-weight: bold;
   font-size: 16px;
+  position: relative;
+  text-decoration: none;
   
 }
 .nav__link {
   color: #242424;
   margin-left: 16px;
 }
-.nav__link:hover {
-  color: #008ac9;
-}
+
 .nav__link--primary {
   background-color: #008ac9;
   color: white;
   font-size: 16px;
   padding: 8px;
   border-radius: 24px;
-  text-decoration: none;
+ 
 }
 .nav__link--primary:hover {
-  opacity: 0.8;
+  opacity: 1;
   background-color: #004e97;
   color: white;
   transition: all 300ms ease;
@@ -990,8 +1006,9 @@ header {
   border-radius: 32px;
   color: white;
 }
-.dev__btn:hover {
-  opacity: 0.7;
+.dev1:hover {
+  background-color: #00aeff;
+  scale: 1.2;
 }
 
 .dev1 {
@@ -1000,6 +1017,10 @@ header {
 
 .dev2 {
   border: 1px solid white;
+}
+.dev2:hover {
+  background-color: #00aeff;
+  scale: 1.2;
 }
 .text--purple {
   color: #242424;
@@ -1039,6 +1060,9 @@ footer {
   color: white;
   font-size: 12px;
   margin-top: 20px;
+}
+.footer__menu-list:hover {
+  text-decoration: underline;
 }
 .footer__img--wrapper {
    color: white;
@@ -1097,7 +1121,9 @@ footer {
   .header__container {
     display: flex;
     flex-direction: column-reverse;
+    justify-content: center;
     text-align: center;
+    margin-right: 0;
   }
   .header__description--container {
     width: 100%;
