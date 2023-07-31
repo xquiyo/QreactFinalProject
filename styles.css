@@ -112,6 +112,11 @@ button:hover {
   text-align: center;
   border: none;
   display: none;
+  text-decoration: none;
+}
+.btn__menu:hover {
+  color:black;
+  background-color: white;
 }
 
 .menu__backdrop {
@@ -159,6 +164,9 @@ button:hover {
 .menu__link {
   color: #242424;
   font-size: 24px;
+}
+.menu__link:hover {
+  color: #004e97;
 }
 
 .menu__list {
@@ -318,7 +326,7 @@ nav {
 .nav__link--primary {
   background-color: #008ac9;
   color: white;
-  font-size: 16px;
+  font-size: 24px;
   padding: 8px;
   border-radius: 24px;
  
@@ -427,7 +435,9 @@ header {
   letter-spacing: 1.2px;
   padding: 4px 4px;
 }
-
+.btn:hover {
+  scale: 1.09;
+}
 .customer__logos {
   margin-top: 4px;
   padding: 12px;
@@ -1336,6 +1346,9 @@ footer {
   .dev__description {
     width: 100%;
   }
+  .footer__copyright {
+   text-align: center;
+  }
   .footer__menu {
     padding: 8px;
     text-align: center;
@@ -1346,6 +1359,10 @@ footer {
   .footer__img--wrapper, .footer__copyright, .footer__links {
     padding: 12px;
   }
-  
+  .footer__menu--wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
   
